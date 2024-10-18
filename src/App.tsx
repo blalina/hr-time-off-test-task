@@ -9,7 +9,7 @@ import { ProtectedRoutes } from "./utils/ProtectedRoutes";
 export function App() {
     return (
         <ApolloProvider client={client}>
-            <BrowserRouter>
+            <BrowserRouter basename="/hr-time-off-test-task">
                 <Routes>
                     <Route
                         path="/"
