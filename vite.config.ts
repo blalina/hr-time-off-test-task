@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: "./",
+    base: "hr-time-off-test-task",
     plugins: [react()],
     resolve: {
         alias: {
