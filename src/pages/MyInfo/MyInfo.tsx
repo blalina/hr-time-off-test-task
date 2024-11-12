@@ -136,7 +136,8 @@ export const MyInfo = () => {
             </div>
             <div className="flex justify-center w-full bg-[#DAE6F2]">
                 <div className="flex justify-between w-full  mt-8">
-                    <div className="w-1/5 ml-24">
+                    {/* // ml-24 заменить на padding-left: 6rem */}
+                    <div className="w-1/5 pl-24">
                         <Avatar className="w-[10rem] h-auto z-10">
                             <AvatarImage
                                 src={avatar}
@@ -144,7 +145,9 @@ export const MyInfo = () => {
                             />
                         </Avatar>
                     </div>
-                    <div className="w-4/5 flex flex-col self-end gap-[2rem] mr-16">
+                    {/* // mr-16 заменить на padding-left: 3rem and padding-right:
+                    4rem */}
+                    <div className="w-4/5 flex flex-col self-end gap-[2rem] pl-12 pr-16">
                         <div className="flex flex-row justify-between">
                             <span className="font-semibold text-28 leading-8">
                                 {name}
@@ -185,9 +188,9 @@ export const MyInfo = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex item-center">
-                            <NavigationMenu>
-                                <NavigationMenuList className="flex gap-[0.9rem]">
+                        <div>
+                            <NavigationMenu className="block flex-none max-w-none">
+                                <NavigationMenuList className="flex justify-between items-center">
                                     <NavigationMenuItem>
                                         <NavigationMenuLink
                                             className={tabLinkClasses}>
