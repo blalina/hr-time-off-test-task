@@ -37,7 +37,7 @@ export const TimeOff = () => {
                     </p>
                 </div>
                 <div className="flex items-center space-x-5">
-                    <p className="flex items-center font-medium text-sm leading-6">
+                    <p className="flex items-center font-medium text-sm leading-6 hidden md-high:flex">
                         Accrual Level Start Date{" "}
                         <p className="block text-sm leading-6 text-[#3758AB] pl-1">
                             03/09-2020
@@ -47,7 +47,8 @@ export const TimeOff = () => {
                 </div>
             </div>
             <Separator className="bg-[#7C96B1]" />
-            <div className="flex justify-center m-4">
+            {/* md-high:flex-col md-high:gap-4  от этого и выше xl:justify-between sm-low:justify-end*/}
+            <div className="flex justify-center m-4  xl:flex-row sm:flex-col xl:gap-0 sm:gap-4">
                 <div className="flex flex-col items-center mr-8">
                     <Card className="w-64 h-[8.5rem] flex flex-col items-center justify-center bg-[#F0F3F8] p-2.5 shadow-none border-none rounded-lg">
                         <CardHeader className="p-1.5">
@@ -103,7 +104,7 @@ export const TimeOff = () => {
                         Holiday Full-Time
                     </p>
                 </div>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center xl:mr-0 sm:mr-8">
                     <Card className="w-64 h-[8.5rem] flex flex-col items-center justify-center bg-[#F0F3F8] p-2.5 shadow-none border-none rounded-lg">
                         <CardHeader className="p-1.5">
                             <CardTitle className="font-semibold text-xl leading-6 text-center">
@@ -176,7 +177,7 @@ export const TimeOff = () => {
                     History
                 </span>
             </div>
-            <div className="select flex w-full items-center gap-2 my-3">
+            <div className="select flex w-full items-center gap-2 my-3 md-high:flex-row sm:flex-col sm:items-start">
                 <div className="relative min-w-64">
                     <Select>
                         <SelectTrigger className="w-full border-[#7C96B1]">

@@ -62,8 +62,8 @@ export const MyInfo = () => {
     };
 
     return (
-        <div className="max-w-full h-[90rem] bg-[#F0F3F8]">
-            <div className="flex justify-between pt-8 px-6 pb-3.5 bg-white">
+        <div className="max-w-full h-[90rem] xl:h-[90rem] sm:h-auto bg-[#F0F3F8]">
+            <div className="flex justify-between pt-8 px-6 pb-3.5 bg-white md-high:pb-3.5 sm:pb-0">
                 <div>
                     <a href="/MyInfo">
                         <span className="font-inter font-semibold text-xl leading-6">
@@ -74,41 +74,48 @@ export const MyInfo = () => {
                 <div className="flex items-end">
                     <NavigationMenu>
                         <NavigationMenuList className="flex gap-2">
-                            <NavigationMenuItem>
+                            <NavigationMenuItem className="hidden md-high:block">
                                 <NavigationMenuLink className={navLinkClasses}>
                                     Home
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink
-                                    className={`${navLinkClasses} ${"bg-[#DAE6F2] rounded-t-xl"}`}>
+                                    className={`${navLinkClasses} ${"bg-[#DAE6F2] rounded-t-xl pb-[1.2rem]"}`}>
                                     My Info
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
-                            <NavigationMenuItem>
+                            <NavigationMenuItem className="hidden md-high:block">
                                 <NavigationMenuLink className={navLinkClasses}>
                                     People
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
-                            <NavigationMenuItem>
+                            <NavigationMenuItem className="hidden md-high:block">
                                 <NavigationMenuLink className={navLinkClasses}>
                                     Hiring
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
-                            <NavigationMenuItem>
+                            <NavigationMenuItem className="hidden md-high:block">
                                 <NavigationMenuLink className={navLinkClasses}>
                                     Reports
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
-                            <NavigationMenuItem>
+                            <NavigationMenuItem className="hidden md-high:block">
                                 <NavigationMenuLink className={navLinkClasses}>
                                     Files
+                                </NavigationMenuLink>
+                            </NavigationMenuItem>
+                            <NavigationMenuItem className="md-high:hidden sm:block">
+                                <NavigationMenuLink
+                                    className={`${navLinkClasses} ${"flex items-center"}`}>
+                                    More
+                                    <ChevronDown />
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                         </NavigationMenuList>
                     </NavigationMenu>
                 </div>
-                <div className="relative">
+                <div className="relative hidden lg-low:block">
                     <Search
                         className="absolute left-2.5 top-1/2 transform -translate-y-1/2"
                         width="16"
@@ -118,13 +125,13 @@ export const MyInfo = () => {
                         type="text"
                         name="search"
                         placeholder="Search"
-                        className="w-80 shadow-none font-light text-lg leading-5 text-black placeholder:text-black pl-12 border border-black focus:border-black focus:ring-0 rounded-xl"
+                        className="w-80 xl:w-80 xl-low:w-60 md-high:w-52 shadow-none font-light text-lg leading-5 text-black placeholder:text-black pl-12 border border-black focus:border-black focus:ring-0 rounded-xl"
                     />
                 </div>
                 <div className="flex items-center gap-4">
-                    <Settings />
-                    <CircleHelp />
-                    <Bell />
+                    <Settings className="hidden xl:block" />
+                    <CircleHelp className="hidden xl:block" />
+                    <Bell className="hidden xl:block" />
                     <Avatar>
                         <AvatarImage
                             src={avatar}
@@ -136,8 +143,7 @@ export const MyInfo = () => {
             </div>
             <div className="flex justify-center w-full bg-[#DAE6F2]">
                 <div className="flex justify-between w-full  mt-8">
-                    {/* // ml-24 заменить на padding-left: 6rem */}
-                    <div className="w-1/5 pl-24">
+                    <div className="w-1/5 pl-24 2.5xl:pl-26  2.75px:pl-28 xl-low:pl-24 md-low:pl-20 sm-low:pl-16 sm:pl-8 sm:hidden sm-low:block">
                         <Avatar className="w-[10rem] h-auto z-10">
                             <AvatarImage
                                 src={avatar}
@@ -145,14 +151,12 @@ export const MyInfo = () => {
                             />
                         </Avatar>
                     </div>
-                    {/* // mr-16 заменить на padding-left: 3rem and padding-right:
-                    4rem */}
-                    <div className="w-4/5 flex flex-col self-end gap-[2rem] pl-12 pr-16">
+                    <div className="w-4/5 flex flex-col self-end gap-[2rem] pl-10 pr-16  xl:pl-10 md-high:pl-24 sm-low:pl-32 sm-low:pl-40 sm:pl-8 sm:pr-8 sm-low:w-4/5 sm:w-full">
                         <div className="flex flex-row justify-between">
                             <span className="font-semibold text-28 leading-8">
                                 {name}
                             </span>
-                            <div className="flex ">
+                            <div className="flex sm-low:flex-row sm:flex-col sm-low:gap-0 sm:gap-4">
                                 <Select>
                                     <SelectTrigger className="w-[180px] mr-4 border-[#7C96B1]">
                                         <SelectValue placeholder="Request a Change" />
@@ -190,14 +194,14 @@ export const MyInfo = () => {
                         </div>
                         <div>
                             <NavigationMenu className="block flex-none max-w-none">
-                                <NavigationMenuList className="flex justify-between items-center">
-                                    <NavigationMenuItem>
+                                <NavigationMenuList className="flex xl:justify-between sm:justify-end items-center">
+                                    <NavigationMenuItem className="hidden xl:block">
                                         <NavigationMenuLink
                                             className={tabLinkClasses}>
                                             Personal
                                         </NavigationMenuLink>
                                     </NavigationMenuItem>
-                                    <NavigationMenuItem>
+                                    <NavigationMenuItem className="hidden xl:block">
                                         <NavigationMenuLink
                                             className={tabLinkClasses}>
                                             Job
@@ -209,37 +213,37 @@ export const MyInfo = () => {
                                             Time Off
                                         </NavigationMenuLink>
                                     </NavigationMenuItem>
-                                    <NavigationMenuItem>
+                                    <NavigationMenuItem className="hidden xl:block">
                                         <NavigationMenuLink
                                             className={tabLinkClasses}>
                                             Emergency
                                         </NavigationMenuLink>
                                     </NavigationMenuItem>
-                                    <NavigationMenuItem>
+                                    <NavigationMenuItem className="hidden xl:block">
                                         <NavigationMenuLink
                                             className={tabLinkClasses}>
                                             Documents
                                         </NavigationMenuLink>
                                     </NavigationMenuItem>
-                                    <NavigationMenuItem>
+                                    <NavigationMenuItem className="hidden xl:block">
                                         <NavigationMenuLink
                                             className={tabLinkClasses}>
                                             Notes
                                         </NavigationMenuLink>
                                     </NavigationMenuItem>
-                                    <NavigationMenuItem>
+                                    <NavigationMenuItem className="hidden xl:block">
                                         <NavigationMenuLink
                                             className={tabLinkClasses}>
                                             Benefits
                                         </NavigationMenuLink>
                                     </NavigationMenuItem>
-                                    <NavigationMenuItem>
+                                    <NavigationMenuItem className="hidden xl:block">
                                         <NavigationMenuLink
                                             className={tabLinkClasses}>
                                             Training
                                         </NavigationMenuLink>
                                     </NavigationMenuItem>
-                                    <NavigationMenuItem>
+                                    <NavigationMenuItem className="hidden xl:block">
                                         <NavigationMenuLink
                                             className={tabLinkClasses}>
                                             Assets
@@ -259,7 +263,7 @@ export const MyInfo = () => {
                 </div>
             </div>
             <div className="flex w-full px-[5%] gap-[2%]">
-                <div>
+                <div className="hidden sm-low:block">
                     <AsideInfo />
                 </div>
                 <TimeOff />

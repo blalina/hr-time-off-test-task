@@ -13,6 +13,18 @@ export default {
 		fontSize: {
 			'28': '28px'
 		},
+		screens: {
+			'sm': '320px',
+			'sm-low': '680px',
+			'md': '768px',
+			'md-low': '850px',
+			'md-high': '900px',	
+			'lg-low': '1024px',
+			'xl-low': '1200px',
+			'2.5xl': '1680px',
+			'2.75px': '1800px',
+			'3xl': '1920px',
+		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
